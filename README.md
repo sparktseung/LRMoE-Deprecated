@@ -1,2 +1,3 @@
-# LRMoE
-Logit-Reduced Mixture-of-Expert in R
+# Introduction
+
+**LRMoE** a statistical software tailor-made for actuarial applications which allows actuarial researchers and practitioners to model and analyze insurance loss frequencies and severities using the Logit-weighted Reduced Mixture-of-Experts (LRMoE) model. **LRMoE** offers several new distinctive features which are motivated by various actuarial applications and mostly cannot be achieved using existing packages for mixture models. Key features include a wider coverage on frequency and severity distributions and their zero inflation, the flexibility to vary classes of distributions across components, parameter estimation under data censoring and truncation, and a collection of insurance rate making and reserving functions. The package also provides several model evaluation and visualization functions to help users easily analyze the performance of the fitted model and interpret the model in insurance contexts.
