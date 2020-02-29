@@ -1,4 +1,4 @@
-# Introduction: LRMoE
+# Overview
 
 **LRMoE** is a statistical software tailor-made for actuarial applications which allows actuarial researchers and practitioners to model and analyze insurance loss frequencies and severities using the Logit-weighted Reduced Mixture-of-Experts (LRMoE) model.
 
