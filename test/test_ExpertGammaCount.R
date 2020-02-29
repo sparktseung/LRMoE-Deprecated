@@ -13,3 +13,5 @@ s = 0.2
 temp = expert.gammacount(tl, yl, yu, tu, g = 1, m, s)
 
 head(cbind(temp[[1]], temp[[2]], temp[[3]]), 8)
+
+mgammacount(1, m, s)
