@@ -2,6 +2,10 @@
 
 - [Overview](#overview)
 - [Model Description](#model-description)
+- [Package Installation and Usage](#package-installation-and-usage)
+- [Supported Distributions](#supported-distributions)
+- [Issue Report and Suggestions](#issue-report-and-suggestions)
+- [Planned Development](#planned-development)
 
 # Overview 
 
@@ -42,3 +46,12 @@ install_github("sparktseung/LRMoE")
 ```
 
 For a detailed demonstration of using the package, we have set up a a separate repository LRMoE-Paper-Demo, which also accompanies a paper submitted to the Annals of Actuarial Science (March 2, 2020). In that paper, we have provided two illustrative examples (one on a simulated dataset and another on a real dataset), in order to demonstrate the basic procedures of model fitting, selection, visualization and application.
+
+# Supported Distributions
+
+
+
+# Issue Report and Suggestions
+
+
+# Planned Development
