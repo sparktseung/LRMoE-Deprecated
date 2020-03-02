@@ -32,10 +32,13 @@ The parameters ![](https://latex.codecogs.com/svg.latex?(\alpha,&space;\delta,&s
 
 # Package Installation and Usage
 
-While we prepare for submitting the package to Comprehensive R Archive Network ([CRAN](https://cran.r-project.org/)), the package is available in this github repository. It can be downloaded and installed by running the following code.
+While we prepare for submitting the package to Comprehensive R Archive Network ([CRAN](https://cran.r-project.org/)), the package is available in this github repository. The package manual documenting all functions in the package can also be found in [the current repository](https://github.com/sparktseung/LRMoE/blob/master/LRMoE_0.1.0.pdf). 
+
+In R, the **LRMoE** package can be downloaded and installed by running the following code.
 
 ```R
 library(devtools)
 install_github("sparktseung/LRMoE")
 ```
-The package manual can also be found in this repository.
+
+For a detailed demonstration of using the package, we have set up a a separate repository LRMoE-Paper-Demo, which also accompanies a paper submitted to the Annals of Actuarial Science (March 2, 2020). In that paper, we have provided two illustrative examples (one on a similated dataset and another on a real dataset), in order to demonstrate the basic procedures of model fitting, selection, visualization and application.
