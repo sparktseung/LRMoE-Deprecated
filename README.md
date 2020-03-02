@@ -1,4 +1,8 @@
-# Overview
+# LRMoE
+
+[Overview](#overview)
+
+# Overview 
 
 **LRMoE** is an R package tailor-made for actuarial applications which allows actuarial researchers and practitioners to model and analyze insurance loss frequencies and severities using the Logit-weighted Reduced Mixture-of-Experts (LRMoE) model. The flexibility of LRMoE models is theoretically justified in [Fung et al. (2019)](https://www.sciencedirect.com/science/article/pii/S0167668719303956), and an application of LRMoE for modelling correlated insurance claim frequencies is in [Fung et al. (2019)](https://www.cambridge.org/core/journals/astin-bulletin-journal-of-the-iaa/article/class-of-mixture-of-experts-models-for-general-insurance-application-to-correlated-claim-frequencies/E9FCCAD03E68C3908008448B806BAF8E).
 
@@ -25,6 +29,13 @@ where ![](https://latex.codecogs.com/svg.latex?\delta_{jd}) represents a zero-in
 
 The parameters ![](https://latex.codecogs.com/svg.latex?(\alpha,&space;\delta,&space;\Psi)) can be estimated using the Expectation-Conditional-Maximization algorithm, which is implemented in this package.
 
+# Package Installation and Usage
 
+While we prepare for submitting the package to Comprehensive R Archive Network ([CRAN](https://cran.r-project.org/)), the package is available in this github repository. It can be downloaded and installed by running the following code.
+
+```R
+library(devtools)
+install_github("sparktseung/LRMoE")
+```
 
 
