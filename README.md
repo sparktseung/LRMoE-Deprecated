@@ -1,5 +1,9 @@
 # LRMoE
 
+![issues](https://img.shields.io/github/issues/sparktseung/LRMoE)
+![forks](https://img.shields.io/github/forks/sparktseung/LRMoE)
+![stars](https://img.shields.io/github/stars/sparktseung/LRMoE)
+
 - [Overview](#overview)
 - [Model Description](#model-description)
 - [Package Installation and Usage](#package-installation-and-usage)
