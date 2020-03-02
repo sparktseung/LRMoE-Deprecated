@@ -41,4 +41,4 @@ library(devtools)
 install_github("sparktseung/LRMoE")
 ```
 
-For a detailed demonstration of using the package, we have set up a a separate repository LRMoE-Paper-Demo, which also accompanies a paper submitted to the Annals of Actuarial Science (March 2, 2020). In that paper, we have provided two illustrative examples (one on a similated dataset and another on a real dataset), in order to demonstrate the basic procedures of model fitting, selection, visualization and application.
+For a detailed demonstration of using the package, we have set up a a separate repository LRMoE-Paper-Demo, which also accompanies a paper submitted to the Annals of Actuarial Science (March 2, 2020). In that paper, we have provided two illustrative examples (one on a simulated dataset and another on a real dataset), in order to demonstrate the basic procedures of model fitting, selection, visualization and application.
