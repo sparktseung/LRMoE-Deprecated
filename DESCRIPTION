@@ -14,7 +14,7 @@ License: GPL-3
 URL: https://github.com/sparktseung/LRMoE
 BugReports: https://github.com/sparktseung/LRMoE/issues
 Encoding: UTF-8
-LazyData: true
+LazyData: false
 Depends: R (>= 3.5.1)
 Imports:
   actuar,
