@@ -1,8 +1,8 @@
 # LRMoE
 
-![issues](https://img.shields.io/github/issues/sparktseung/LRMoE)
-![forks](https://img.shields.io/github/forks/sparktseung/LRMoE)
-![stars](https://img.shields.io/github/stars/sparktseung/LRMoE)
+[![issues](https://img.shields.io/github/issues/sparktseung/LRMoE)](https://github.com/sparktseung/LRMoE/issues)
+[![forks](https://img.shields.io/github/forks/sparktseung/LRMoE)](https://github.com/sparktseung/LRMoE/network/members)
+[![stars](https://img.shields.io/github/stars/sparktseung/LRMoE)](https://github.com/sparktseung/LRMoE/stargazers)
 
 - [Overview](#overview)
 - [Model Description](#model-description)
