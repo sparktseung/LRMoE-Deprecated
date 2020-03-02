@@ -60,12 +60,12 @@ gammacount.params.m.recur = function(gammacount.params.old,
     expert.gammacount.tn.bar[!no.trunc.idx,1] = log1mexp(-expert.gammacount.tn[!no.trunc.idx,1])
     expert.gammacount.tn.bar[no.trunc.idx,1] = log1mexp(-expert.gammacount.tn[no.trunc.idx,1])
 
-    result = apply(sweep(matrix(z.e.obs), 1, matrix(expert.gammacount.ll), FUN = "*", check.margin = FALSE), 2, FUN = "sum") +
-      apply(sweep(matrix(k.e), 2,
-                  sweep(matrix(z.e.lat), 2, matrix(expert.gammacount.tn), FUN = "*", check.margin = FALSE),
-                  FUN = "*", check.margin = FALSE),
-            2, FUN = "sum")
-      # sum(z.e.obs*expert.gammacount.ll) + sum(k.e*z.e.lat*expert.gammacount.tn)
+    # result = apply(sweep(matrix(z.e.obs), 1, matrix(expert.gammacount.ll), FUN = "*", check.margin = FALSE), 2, FUN = "sum") +
+    #   apply(sweep(matrix(k.e), 2,
+    #               sweep(matrix(z.e.lat), 2, matrix(expert.gammacount.tn), FUN = "*", check.margin = FALSE),
+    #               FUN = "*", check.margin = FALSE),
+    #         2, FUN = "sum")
+    result = sum(z.e.obs*expert.gammacount.ll) + sum(k.e*z.e.lat*expert.gammacount.tn)
     if(penalty==TRUE){
       result = result + (hyper.m.1-1)*log(shape.m.new) - shape.m.new/hyper.m.2 + (hyper.s.1-1)*log(disp.s.new) - disp.s.new/hyper.s.2
     }
