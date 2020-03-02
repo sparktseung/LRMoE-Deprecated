@@ -38,5 +38,4 @@ While we prepare for submitting the package to Comprehensive R Archive Network (
 library(devtools)
 install_github("sparktseung/LRMoE")
 ```
-
-
+The package manual can also be found in this repository.
