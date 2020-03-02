@@ -8,6 +8,7 @@
 #' @param zero.prob A d*g matrix of numerics in (0,1), which specify the probability mass at zero for component distributions.
 #' @param params.init A list of length d, where each element is a sublist of length g.
 #'                    Each sublist contains one numeric vector, which is the parameter value for the corresponding \code{comp.dist}.
+#' @param title A text string for plot title.
 #'
 #' @return A \code{ggplot2} object.
 #'

@@ -28,6 +28,8 @@ The rows represent the dimensions of \code{Y}, while the columns represent the c
 
 \item{params.list}{A list of length d, where each element is a sublist of length g.
 Each sublist contains one numeric vector, which is the parameter value for the corresponding \code{comp.dist}.}
+
+\item{title}{A text string for plot title.}
 }
 \value{
 A \code{ggplot2} object.

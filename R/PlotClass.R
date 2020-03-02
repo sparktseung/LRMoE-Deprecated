@@ -2,6 +2,7 @@
 #'
 #' @param X A matrix of covariates.
 #' @param alpha A matrix of logit regression coeffiecients.
+#' @param title A text string for plot title.
 #'
 #' @return A \code{ggplot2} object.
 #'

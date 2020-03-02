@@ -10,6 +10,8 @@
 \item{X}{A matrix of covariates.}
 
 \item{alpha}{A matrix of logit regression coeffiecients.}
+
+\item{title}{A text string for plot title.}
 }
 \value{
 A \code{ggplot2} object.
