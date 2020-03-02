@@ -76,6 +76,9 @@ predict.class.posterior(head(X), head(Y.obs),
 plot.dataset.prob.posterior(X, Y.obs,
       model.fit$alpha.fit, model.fit$comp.dist, model.fit$zero.fit, model.fit$params.fit)
 
-
+# plot.ind.fitted.dist
+plot.ind.fitted.dist(X[6,],
+                     model.fit$alpha.fit, model.fit$comp.dist, model.fit$zero.fit, model.fit$params.fit,
+                     plot.dim = 1, plot.lim = 100)
 
 
