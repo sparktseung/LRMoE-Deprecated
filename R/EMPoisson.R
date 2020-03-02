@@ -68,14 +68,15 @@ poisson.params.m.recur = function(poisson.params.old,
   # Integration
   y.e.obs.unique = array(0,dim=c(y.unique.length,1))
 
-  y.e.obs.unique[,1] = 0
-    # mapply(function(x, y) ifelse(x!=y,
-    #                              int.y.fcn(x, y, mean.theta),
-    #                              # 0),
-    #                              y*dpois(y, mean.theta) ),
-    #        yl.unique, yu.unique)
-  y.e.obs.unique[(yl.unique!=yu.unique),1] =
-    mapply(function(x, y){int.y.fcn(x, y, mean.theta)}, yl.unique[yl.unique!=yu.unique], yu.unique[yl.unique!=yu.unique])
+  y.e.obs.unique[,1] = # 0
+    mapply(function(x, y) ifelse(x!=y,
+                                 int.y.fcn(x, y, mean.theta),
+                                 # 0),
+                                 y*dpois(y, mean.theta) ),
+           yl.unique, yu.unique)
+  # y.e.obs.unique[which(yl.unique!=yu.unique),1] =
+  #   mapply(function(x, y){int.y.fcn(x, y, mean.theta)}, yl.unique[yl.unique!=yu.unique], yu.unique[yl.unique!=yu.unique], MoreArgs = list(mean.theta = mean.theta))
+  # y.e.obs.unique = matrix(y.e.obs.unique)
 
   # Match to all observations of y
   temp.y.e.obs = array(0, dim = c(sample.size.n, 1))
@@ -94,14 +95,14 @@ poisson.params.m.recur = function(poisson.params.old,
   # Integration
   y.e.lat.unique = array(0,dim=c(tn.unique.length,1))
 
-  # y.e.lat.unique[,1] = mean.theta # -
-    # mapply(function(x, y) ifelse(x!=y,
-    #                              int.y.fcn(x, y, mean.theta),
-    #                              # 0),
-    #                              y*dpois(y, mean.theta) ),
-    #        tl.unique, tu.unique)
-  y.e.lat.unique[(tl.unique==tu.unique),1] = mean.theta - tl.unique[tl.unique==tu.unique]*dpois(tl.unique[tl.unique==tu.unique], mean.theta)
-  y.e.lat.unique[(tl.unique!=tu.unique),1] = mean.theta - mapply(function(x, y){int.y.fcn(x, y, mean.theta)}, tl.unique[tl.unique!=tu.unique], tu.unique[tl.unique!=tu.unique])
+  y.e.lat.unique[,1] = mean.theta -
+    mapply(function(x, y) ifelse(x!=y,
+                                 int.y.fcn(x, y, mean.theta),
+                                 # 0),
+                                 y*dpois(y, mean.theta) ),
+           tl.unique, tu.unique)
+  # y.e.lat.unique[(tl.unique==tu.unique),1] = mean.theta - tl.unique[tl.unique==tu.unique]*dpois(tl.unique[tl.unique==tu.unique], mean.theta)
+  # y.e.lat.unique[(tl.unique!=tu.unique),1] = mean.theta - mapply(function(x, y){int.y.fcn(x, y, mean.theta)}, tl.unique[tl.unique!=tu.unique], tu.unique[tl.unique!=tu.unique])
 
   # Match to all observations of y
   temp.y.e.lat = array(0, dim = c(sample.size.n, 1))

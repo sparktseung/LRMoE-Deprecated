@@ -161,9 +161,6 @@ LRMoE.fit = function(Y, X, n.comp = 2, comp.dist = NULL,
         z.zero.e.lat = comp.zkz.e.list$z.e.lat[,j] * z.zero.e.lat.recur(tl.k, comp.kj.zero.inflation, comp.kj.zero.prob.old, comp.kj.pos.expert.tn.bar)
         z.pos.e.lat = comp.zkz.e.list$z.e.lat[,j] - z.zero.e.lat
 
-        # z.zero.e.lat = comp.zkz.e.list$z.e.lat[[k]][,j] * z.zero.e.lat.recur(tl.k, comp.kj.zero.inflation, comp.kj.zero.prob.old, comp.kj.pos.expert.tn.bar)
-        # z.pos.e.lat = comp.zkz.e.list$z.e.lat[[k]][,j] - z.zero.e.lat
-
         # M-Step: loglik maximization wrt zero probabilities
         if(comp.kj.zero.inflation==TRUE) # Only do this for zero-inflated distributions
         {
@@ -173,8 +170,7 @@ LRMoE.fit = function(Y, X, n.comp = 2, comp.dist = NULL,
           loglik.em.before.kj = ll.list.em$ll
 
           comp.kj.zero.prob.old = zero.em[k,j]
-          # comp.kj.zero.prob.new = zero.prob.m.recur(z.zero.e.obs, z.pos.e.obs, z.zero.e.lat, z.pos.e.lat, comp.zkz.e.list$k.e)
-          comp.kj.zero.prob.new = zero.prob.m.recur(z.zero.e.obs, z.pos.e.obs, z.zero.e.lat, z.pos.e.lat, comp.zkz.e.list$k.e[,k])
+          comp.kj.zero.prob.new = zero.prob.m.recur(z.zero.e.obs, z.pos.e.obs, z.zero.e.lat, z.pos.e.lat, comp.zkz.e.list$k.e)
           zero.em[k,j] = comp.kj.zero.prob.new
 
           gate.ll.em = gate.logit(X, alpha.em) # alpha.em has been updated
