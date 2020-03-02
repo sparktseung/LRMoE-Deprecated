@@ -45,13 +45,26 @@ library(devtools)
 install_github("sparktseung/LRMoE")
 ```
 
-For a detailed demonstration of using the package, we have set up a a separate repository LRMoE-Paper-Demo, which also accompanies a paper submitted to the Annals of Actuarial Science (as of Feb 29, 2020). In that paper, we have provided two illustrative examples (one on a simulated dataset and another on a real dataset), in order to demonstrate the basic procedures of model fitting, selection, visualization and application.
+For a detailed demonstration of using the package, we have set up a a separate repository LRMoE-Paper-Demo, which also accompanies a paper submitted to the Annals of Actuarial Science (as of Feb 29, 2020). In that paper (and repository), we have provided two illustrative examples (one on a simulated dataset and another on a real dataset), in order to demonstrate the basic procedures of model fitting, selection, visualization and application.
 
 # Supported Distributions
 
+Currently, the **LRMoE** package support the following distributions, which are motivated by modelling insurance claim frequency and severity in actuarial science.
 
+| R-root     	| Distribution                   	| Density ![](https://latex.codecogs.com/svg.latex?f_{jd}(y))	| Parameters 	|
+|:----------:	|:------------------------------:	|:-------:	|:----------:	|
+|    `gamma`   	|              Gamma             	|   ![](https://latex.codecogs.com/svg.latex?\frac{1}{\theta^{m}\Gamma(m)}y^{m-1}e^{-y/\theta})   	|     `shape` ![](https://latex.codecogs.com/svg.latex?m>0), `scale` ![](https://latex.codecogs.com/svg.latex?\theta>0)  	|
+|    `lnorm`   	|           Log Normal           	| ![](https://latex.codecogs.com/svg.latex?\frac{1}{y\sigma\sqrt{2\pi}}\exp&space;\left[&space;-&space;\frac{1}{2}\left(&space;\frac{\log(y)-\mu}{\sigma}&space;\right&space;)^2&space;\right&space;])        	|  `meanlog` ![](https://latex.codecogs.com/svg.latex?\mu>0), `sdlog` ![](https://latex.codecogs.com/svg.latex?\sigma>0)            	|
+|  `invgauss`  	|        Inverse Gaussian        	| ![](https://latex.codecogs.com/svg.latex?\sqrt{\frac{\lambda}{2\pi&space;y^3}}&space;\exp&space;\left[&space;-&space;\frac{\lambda}{2y}\left(&space;\frac{y-\mu}{\mu}&space;\right&space;)^2&space;\right&space;])        	|  `mean` ![](https://latex.codecogs.com/svg.latex?\mu>0), `scale` ![](https://latex.codecogs.com/svg.latex?\lambda>0)          	|
+|   `weibull`  	|             Weibull            	| ![](https://latex.codecogs.com/svg.latex?\frac{k}{\lambda}&space;\left(\frac{y}{\lambda}&space;\right)^{k-1}&space;\exp&space;\left[&space;-\left(\frac{y}{\lambda}&space;\right&space;)^{k}&space;\right&space;])        	| `shape` ![](https://latex.codecogs.com/svg.latex?k>0), `scale` ![](https://latex.codecogs.com/svg.latex?\lambda>0)           	|
+|    `burr`    	|              Burr              	| ![](https://latex.codecogs.com/svg.latex?\frac{ck}{\lambda}&space;\left(\frac{y}{\lambda}&space;\right)^{c-1}&space;\left[&space;1&space;&plus;\left(\frac{y}{\lambda}&space;\right&space;)^{c}&space;\right&space;]^{-k-1})        	| `shape1` ![](https://latex.codecogs.com/svg.latex?k>0), `shape2` ![](https://latex.codecogs.com/svg.latex?c>0), <br> `scale` ![](https://latex.codecogs.com/svg.latex?\lambda>0)           	|
+|   `poisson`  	|             Poisson            	| ![](https://latex.codecogs.com/svg.latex?e^{-\lambda}\frac{\lambda^y}{y!})       	|  `mean` ![](https://latex.codecogs.com/svg.latex?\lambda>0)          	|
+|   `nbinom`   	|        Negative Binomial       	| ![](https://latex.codecogs.com/svg.latex?\binom{y&plus;n-1}{n-1}p^n(1-p)^y)        	| `size.n` ![](https://latex.codecogs.com/svg.latex?n&space;\in&space;N^+), `prob.p` ![](https://latex.codecogs.com/svg.latex?0<p<1)           	|
+| `gammacount` 	|           Gamma-Count          	| `pgamma(ms, ys, 1) -`  <br> `pgamma(ms, (y+1)s, 1)`       	| ![](https://latex.codecogs.com/svg.latex?m>0), ![](https://latex.codecogs.com/svg.latex?s>0)           	|
+|     `ZI-root`	| Zero inflation<br>of all above 	| ![](https://latex.codecogs.com/svg.latex?g_{jd}&space;=&space;\delta_{jd}I_{\{y_{id}&space;=&space;0\}}&space;&plus;&space;(1-\delta_{jd})f_{jd}(y_{id};&space;\psi_{jd}))        	|  ![](https://latex.codecogs.com/svg.latex?0<\delta_{jd}<1)          	|
 
 # Issue Report and Suggestions
 
+Issues and suggestions can be posted on [https://github.com/sparktseung/LRMoE/issues](https://github.com/sparktseung/LRMoE/issues).
 
 # Planned Development
