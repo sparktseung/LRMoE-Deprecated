@@ -27,7 +27,7 @@
 #'
 #' @return A vector of density values evaluatd at y given.
 #'
-#' @seealso \code{\link{LRMoE.fit}}, \code{\link{plot.ind.fitted.dist}}
+#' @seealso \code{\link{LRMoE.fit}}, \code{\link{plot.ind.fitted.dist}}, \code{\link{ind.cdf.y.pos}}.
 #'
 #' @importFrom stats dgamma dlnorm dweibull dpois dnbinom
 #' @importFrom statmod dinvgauss

@@ -69,8 +69,15 @@ predict.excess(X[1:10,],
    model.fit$alpha.fit, model.fit$comp.dist, model.fit$zero.fit, model.fit$params.fit,
    c(1, 2))
 
+# predict.quantile/ .cte
+predict.quantile(X[1:10,],
+     model.fit$alpha.fit, model.fit$comp.dist, model.fit$zero.fit, model.fit$params.fit,
+     c(0.90, 0.80))
 
+ind.predict.quantile(X[1,],
+                 model.fit$alpha.fit, model.fit$comp.dist, model.fit$zero.fit, model.fit$params.fit,
+                 c(0.90, 0.80))
 
-
-
-
+predict.cte(X[1:10,],
+     model.fit$alpha.fit, model.fit$comp.dist, model.fit$zero.fit, model.fit$params.fit,
+     c(0.90, 0.80))
