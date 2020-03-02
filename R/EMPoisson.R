@@ -67,15 +67,22 @@ poisson.params.m.recur = function(poisson.params.old,
 
   # Integration
   y.e.obs.unique = array(0,dim=c(y.unique.length,1))
+  # y.e.obs.unique = matrix(0, nrow = y.unique.length, ncol = 1)
 
-  y.e.obs.unique[,1] = # 0
+  y.e.obs.unique[,1] =
     mapply(function(x, y) ifelse(x!=y,
                                  int.y.fcn(x, y, mean.theta),
                                  # 0),
                                  y*dpois(y, mean.theta) ),
            yl.unique, yu.unique)
-  # y.e.obs.unique[which(yl.unique!=yu.unique),1] =
-  #   mapply(function(x, y){int.y.fcn(x, y, mean.theta)}, yl.unique[yl.unique!=yu.unique], yu.unique[yl.unique!=yu.unique], MoreArgs = list(mean.theta = mean.theta))
+  # y.e.obs.unique[which(yl.unique!=yu.unique)] =
+  #   # mapply(function(x, y){int.y.fcn(x, y, mean.theta)}, yl.unique[yl.unique!=yu.unique], yu.unique[yl.unique!=yu.unique], MoreArgs = list(mean.theta = mean.theta))
+  #   sapply(X = cbind(yl.unique[yl.unique!=yu.unique], yu.unique[yl.unique!=yu.unique]),
+  #          FUN = function(x){int.y.fcn(x[,1], x[,2], mean.theta)},
+  #          mean.theta = mean.theta,
+  #          simplify = TRUE)
+  # y.e.obs.unique[which(yl.unique==yu.unique)] =
+  #   yl.unique[which(yl.unique==yu.unique)] * dpois(yl.unique[which(yl.unique==yu.unique)], mean.theta)
   # y.e.obs.unique = matrix(y.e.obs.unique)
 
   # Match to all observations of y
