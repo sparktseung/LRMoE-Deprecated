@@ -55,15 +55,25 @@ model.fit = LRMoE.fit(Y = Y.obs, X = X,
 # predict.class.prob
 predict.class.prob(head(X), model.fit$alpha.fit)
 
+plot.ind.class.prob(X[1,], model.fit$alpha.fit) # + ggtitle("haha")
+
 # predict.class
 predict.class(head(X), model.fit$alpha.fit)
+
+plot.dataset.class.prob(X, model.fit$alpha.fit)
 
 # predict.class.prob.posterior
 predict.class.prob.posterior(head(X), head(Y.obs),
       model.fit$alpha.fit, model.fit$comp.dist, model.fit$zero.fit, model.fit$params.fit)
 
+plot.ind.class.prob.posterior(X[1,], Y.obs[1,],
+      model.fit$alpha.fit, model.fit$comp.dist, model.fit$zero.fit, model.fit$params.fit)
+
 # predict.class.posterior
 predict.class.posterior(head(X), head(Y.obs),
+      model.fit$alpha.fit, model.fit$comp.dist, model.fit$zero.fit, model.fit$params.fit)
+
+plot.dataset.prob.posterior(X, Y.obs,
       model.fit$alpha.fit, model.fit$comp.dist, model.fit$zero.fit, model.fit$params.fit)
 
 
