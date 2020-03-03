@@ -5,8 +5,8 @@
 [![stars](https://img.shields.io/github/stars/sparktseung/LRMoE)](https://github.com/sparktseung/LRMoE/stargazers)
 
 - [Overview](#overview)
-- [Model Description](#model-description)
 - [Package Installation and Usage](#package-installation-and-usage)
+- [Model Description](#model-description)
 - [Supported Distributions](#supported-distributions)
 - [Issue Report and Suggestions](#issue-report-and-suggestions)
 - [Planned Development](#planned-development)
@@ -21,6 +21,19 @@ The package **LRMoE** offers several new distinctive features which are motivate
 * Parameter estimation under data censoring and truncation;
 * A collection of insurance rate making and reserving functions; and
 * Model selection and visualization tools.
+
+# Package Installation and Usage
+
+While we prepare for submitting the package to Comprehensive R Archive Network ([CRAN](https://cran.r-project.org/)), the package is available in this github repository. The package manual documenting all functions in the package can also be found in [the current repository](https://github.com/sparktseung/LRMoE/blob/master/LRMoE_0.1.0.pdf). 
+
+In R, the **LRMoE** package can be downloaded and installed by running the following code.
+
+```R
+library(devtools)
+install_github("sparktseung/LRMoE")
+```
+
+For a detailed demonstration of using the package, we have set up a a separate repository [LRMoE-Paper-Demo](https://github.com/sparktseung/LRMoE-Paper-Demo), which also accompanies a paper submitted to the Annals of Actuarial Science (as of Feb 29, 2020). In that paper (and repository), we have provided two illustrative examples (one on a simulated dataset and another on a real dataset), in order to demonstrate the basic procedures of model fitting, selection, visualization and application.
 
 # Model Description
 
@@ -37,19 +50,6 @@ where ![](https://latex.codecogs.com/svg.latex?\delta_{jd}) represents a zero-in
 ![](https://latex.codecogs.com/svg.latex?f(y_{i};&space;x_{i},&space;\alpha,&space;\delta,&space;\Psi)&space;=&space;\sum_{j=1}^{g}&space;\pi_{j}(x_{i};&space;\alpha)\prod_{d=1}^{D}g_{jd}(y_{jd};&space;\delta_{jd},&space;\psi_{jd}).)
 
 The parameters ![](https://latex.codecogs.com/svg.latex?(\alpha,&space;\delta,&space;\Psi)) can be estimated using the Expectation-Conditional-Maximization algorithm, which is implemented in this package.
-
-# Package Installation and Usage
-
-While we prepare for submitting the package to Comprehensive R Archive Network ([CRAN](https://cran.r-project.org/)), the package is available in this github repository. The package manual documenting all functions in the package can also be found in [the current repository](https://github.com/sparktseung/LRMoE/blob/master/LRMoE_0.1.0.pdf). 
-
-In R, the **LRMoE** package can be downloaded and installed by running the following code.
-
-```R
-library(devtools)
-install_github("sparktseung/LRMoE")
-```
-
-For a detailed demonstration of using the package, we have set up a a separate repository [LRMoE-Paper-Demo](https://github.com/sparktseung/LRMoE-Paper-Demo), which also accompanies a paper submitted to the Annals of Actuarial Science (as of Feb 29, 2020). In that paper (and repository), we have provided two illustrative examples (one on a simulated dataset and another on a real dataset), in order to demonstrate the basic procedures of model fitting, selection, visualization and application.
 
 # Supported Distributions
 
