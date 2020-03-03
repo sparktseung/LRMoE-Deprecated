@@ -116,7 +116,7 @@ predict.mean = function(X, alpha, comp.dist, zero.prob, params.list)
   result = apply(X, MARGIN = 1, FUN = ind.predict.mean,
                  alpha = alpha, comp.dist = comp.dist, zero.prob = zero.prob, params.list = params.list)
 
-  return(t(result))
+  return(t(t(result)))
 }
 
 

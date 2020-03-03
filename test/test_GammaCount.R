@@ -48,7 +48,7 @@ Y.obs = cbind(rep(0, N), Y.gc[,1], Y.gc[,1], rep(Inf, N),
 model.fit = LRMoE.fit(Y = Y.obs, X = X,
                       n.comp = 2, comp.dist = comp.dist,
                       alpha.init = alpha.guess,
-                      zero.init = zero.guess,s
+                      zero.init = zero.guess,
                       params.init = params.guess,
                       penalty = TRUE, hyper.alpha = hyper.alpha, hyper.params = hyper.params)
 

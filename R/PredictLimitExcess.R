@@ -118,7 +118,7 @@ predict.limit = function(X, alpha, comp.dist, zero.prob, params.list, limit)
   result = apply(X, MARGIN = 1, FUN = ind.predict.limit,
                  alpha = alpha, comp.dist = comp.dist, params.list = params.list, zero.prob = zero.prob, limit = limit)
 
-  return(t(result))
+  return(t(t(result)))
 }
 
 #' Predict the excess mean of y, given a fixed covariate matrix X, a model and a vector of limits by dimension.

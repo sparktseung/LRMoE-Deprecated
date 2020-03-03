@@ -177,7 +177,7 @@ predict.quantile = function(X, alpha, comp.dist, zero.prob, params.list, prob = 
   result = apply(X, MARGIN = 1, FUN = ind.predict.quantile,
                  prob = prob, alpha = alpha, comp.dist = comp.dist, zero.prob = zero.prob, params.list = params.list)
 
-  return(t(result))
+  return(t(t(result)))
 
 }
 
