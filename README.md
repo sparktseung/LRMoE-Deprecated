@@ -9,7 +9,7 @@
 - [Model Description](#model-description)
 - [Supported Distributions](#supported-distributions)
 - [Issue Report and Suggestions](#issue-report-and-suggestions)
-- [Planned Development](#planned-development)
+- [Development Planned and In Progress](#development-planned-and-in-progress)
 
 # Overview 
 
@@ -71,4 +71,6 @@ Currently, the **LRMoE** package support the following distributions, which are 
 
 Issues and suggestions can be posted on [https://github.com/sparktseung/LRMoE/issues](https://github.com/sparktseung/LRMoE/issues).
 
-# Planned Development
+# Development Planned and In Progress
+
+See [https://github.com/sparktseung/LRMoE/projects](https://github.com/sparktseung/LRMoE/projects).
