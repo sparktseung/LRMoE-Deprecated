@@ -28,5 +28,5 @@ dataset.simulator = function(X, alpha, comp.dist, zero.prob, params.list)
                 sample.size = 1)
 
   # return(t(y.sim))
-  return(t(y.sim))
+  return(t(t(y.sim)))
 }
