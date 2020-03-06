@@ -42,7 +42,7 @@ A list of matrices of expert loglikelihood for the chosen distribution \code{ind
 A switch to calculate the loglikelihood of expert functions.
 }
 \seealso{
-\code{\link{expert.gamma}}, \code{\link{expert.lnorm}}, \code{\link{expert.invgauss}}, \code{\link{expert.weibull}}, \code{\link{expert.burr}},
+\code{\link{expert.gamma}}, \code{\link{expert.lognormal}}, \code{\link{expert.invgauss}}, \code{\link{expert.weibull}}, \code{\link{expert.burr}},
          \code{\link{expert.poisson}}, \code{\link{expert.nbinom}}, \code{\link{expert.gammacount}}
 }
 \keyword{internal}

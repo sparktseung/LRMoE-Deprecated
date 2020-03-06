@@ -10,6 +10,8 @@ dgammacount.new(y, m, s, log = FALSE)
 \item{y}{Vector of gamma count values.}
 
 \item{m, s}{Paramaters of Gamma count distribution.}
+
+\item{log}{TRUE/FALSE: whether log density should be returned.}
 }
 \description{
 Modified \code{\link[rmutil]{GammaCount}} pmf for better numerical accuracy.

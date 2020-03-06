@@ -3,7 +3,21 @@
 \docType{data}
 \name{DemoData}
 \alias{DemoData}
+\alias{X}
+\alias{Y}
+\alias{X.obs}
+\alias{Y.obs}
 \title{Demo data for \code{LRMoE}.}
+\format{An object of class \code{matrix} with 10000 rows and 5 columns.}
+\usage{
+X
+
+Y
+
+X.obs
+
+Y.obs
+}
 \description{
 \itemize{
   \item \code{X}: A matrix of covariates required by the LRMoE fitting function (complete).
@@ -13,3 +27,4 @@
 }
 }
 \keyword{data}
+\keyword{datasets}

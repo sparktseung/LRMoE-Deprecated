@@ -3,7 +3,7 @@
 #'
 #' @seealso \code{\link{comp.kj.params.m.recur}}
 #'
-#' @importFrom stats dweibull optimise integrate
+#' @importFrom stats dweibull optimize integrate
 #' @importFrom expint gammainc
 #'
 #' @keywords internal

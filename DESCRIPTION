@@ -8,14 +8,18 @@ Author: Spark Tseung [aut, cre],
   Andrei L. Badescu [aut],
   Sheldon X. Lin [aut]
 Maintainer: Spark Tseung <spark.tseung@mail.utoronto.ca>
-Description: This package is based on the Logit-Weighted Reduced Mixture of Experts (LRMoE) proposed by Fung et al. (2019),
-  which is a flexible framework actuarial loss modelling.
+Description: This package is based on the Logit-Weighted Reduced Mixture-of-Experts (LRMoE) 
+  proposed by Fung et al. (2019), which is a flexible framework actuarial loss modelling.
+  For more details, see Fung et al. (2019) "A class of mixture of experts models for general insurance: Theoretical developments"
+  published in Insurance: Mathematics and Economics, and
+  Fung et al. (2019) "A CLASS OF MIXTURE OF EXPERTS MODELS FOR GENERAL INSURANCE: APPLICATION TO CORRELATED CLAIM FREQUENCIES"
+  in ASTIN Bulletin: The Journal of the IAA.
 License: GPL-3
 URL: https://github.com/sparktseung/LRMoE
 BugReports: https://github.com/sparktseung/LRMoE/issues
 Encoding: UTF-8
 LazyData: false
-Depends: R (>= 3.5.1)
+Depends: R (>= 3.5)
 Imports:
   actuar,
   copula,

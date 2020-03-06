@@ -33,10 +33,10 @@ expert.gammacount = function(tl, yl, yu, tu, g = 1, m, s)
     censor.idx=(yl!=yu)
 
     # prob.log.yu = log(rmutil::pgammacount(yu, m[j], s[j]))
-    prob.log.yu = pgammacount.new(yu[censor.idx], m = m[j], s = s[j], log = TRUE)
+    prob.log.yu = pgammacount.new(yu[censor.idx], m = m[j], s = s[j], log.p = TRUE)
     # prob.log.yl = log(rmutil::pgammacount(yl, m[j], s[j]))
     # prob.log.yl = pgammacount.new(yl[censor.idx], m = m[j], s = s[j], log = TRUE)
-    prob.log.yl = pgammacount.new(ceiling(yl[censor.idx])-1, m = m[j], s = s[j], log = TRUE)
+    prob.log.yl = pgammacount.new(ceiling(yl[censor.idx])-1, m = m[j], s = s[j], log.p = TRUE)
 
     # Compute loglikelihood for expert j, first for y
     expert.gammacount.ll[censor.idx,j]=prob.log.yu+log1mexp(prob.log.yu-prob.log.yl) # likelihood of censored interval: some easy algebra
@@ -44,11 +44,11 @@ expert.gammacount = function(tl, yl, yu, tu, g = 1, m, s)
 
     # Compute loglikelihood for expert j, then for truncation limits t
     # prob.log.tu = log(rmutil::pgammacount(tu, m[j], s[j]))
-    prob.log.tu = pgammacount.new(tu, m = m[j], s = s[j], log = TRUE)
+    prob.log.tu = pgammacount.new(tu, m = m[j], s = s[j], log.p = TRUE)
     # prob.log.tl = log(rmutil::pgammacount(tl, m[j], s[j]))
     # prob.log.tl = ifelse(tl==0, -Inf, log(rmutil::pgammacount(tl, m[j], s[j])))
     # prob.log.tl = pgammacount.new(tl, m = m[j], s = s[j], log = TRUE)
-    prob.log.tl = pgammacount.new(ceiling(tl)-1, m = m[j], s = s[j], log = TRUE)
+    prob.log.tl = pgammacount.new(ceiling(tl)-1, m = m[j], s = s[j], log.p = TRUE)
 
     # Normalizing factor for truncation limits, in log
     expert.gammacount.tn[,j]=prob.log.tu+log1mexp(prob.log.tu-prob.log.tl)

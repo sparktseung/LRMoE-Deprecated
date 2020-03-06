@@ -14,7 +14,7 @@
 #' @param penalty TRUE/FALSE, which indicates whether parameter penalty should be applied. Default (and recommended) is TRUE.
 #' @param hyper.alpha A numeric, which penalizes the magnitude of \code{alpha}.
 #' @param hyper.params A list of length d. Each element is a sublist of length g.
-#'                     Each element of a sublist is a vector of numerics, which penalizes expert parameters. See also \code{\link{expert.loglik.pen.dim.comp}}.
+#'                     Each element of a sublist is a vector of numerics, which penalizes expert parameters.
 #'
 #' @return Loglikelihood (with and without penalty), AIC and BIC.
 #'

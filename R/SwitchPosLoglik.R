@@ -27,7 +27,7 @@
 #'     \item \code{expert.ind.dist.tn.bar}: An N*1 matrix of loglikelihood outside truncation limits, which is \code{log(1-exp(expert.ind.dist.tn))}.
 #' }
 #'
-#' @seealso \code{\link{expert.gamma}}, \code{\link{expert.lnorm}}, \code{\link{expert.invgauss}}, \code{\link{expert.weibull}}, \code{\link{expert.burr}},
+#' @seealso \code{\link{expert.gamma}}, \code{\link{expert.lognormal}}, \code{\link{expert.invgauss}}, \code{\link{expert.weibull}}, \code{\link{expert.burr}},
 #'          \code{\link{expert.poisson}}, \code{\link{expert.nbinom}}, \code{\link{expert.gammacount}}
 #'
 #' @keywords internal

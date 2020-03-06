@@ -146,7 +146,7 @@ ind.predict.quantile = function(X, alpha, comp.dist, zero.prob, params.list, pro
 #' @param zero.prob A d*g matrix of numerics in (0,1), which specify the probability mass at zero for component distributions.
 #' @param params.list A list of length d, where each element is a sublist of length g.
 #'                    Each sublist contains one numeric vector, which is the parameter value for the corresponding \code{comp.dist}.
-#' @param probs A vector of probabilities. Default is a vector of length d of 0.95, if no value is provided.
+#' @param prob A vector of probabilities. Default is a vector of length d of 0.95, if no value is provided.
 #'
 #' @seealso \code{\link{LRMoE.fit}}, \code{\link{predict.cte}}.
 #'
@@ -191,7 +191,7 @@ predict.quantile = function(X, alpha, comp.dist, zero.prob, params.list, prob = 
 #' @param zero.prob A d*g matrix of numerics in (0,1), which specify the probability mass at zero for component distributions.
 #' @param params.list A list of length d, where each element is a sublist of length g.
 #'                    Each sublist contains one numeric vector, which is the parameter value for the corresponding \code{comp.dist}.
-#' @param probs A vector of probabilities. Default is a vector of length d of 0.95, if no value is provided.
+#' @param prob A vector of probabilities. Default is a vector of length d of 0.95, if no value is provided.
 #'
 #' @seealso \code{\link{LRMoE.fit}}.
 #'
@@ -203,6 +203,7 @@ predict.quantile = function(X, alpha, comp.dist, zero.prob, params.list, prob = 
 #'
 ind.predict.cte = function(X, alpha, comp.dist, zero.prob, params.list, prob = NULL)
 {
+  dim.m = nrow(comp.dist)
   if(is.null(prob))
   {
     prob = rep(0.95, dim.m)
@@ -224,7 +225,7 @@ ind.predict.cte = function(X, alpha, comp.dist, zero.prob, params.list, prob = N
 #' @param zero.prob A d*g matrix of numerics in (0,1), which specify the probability mass at zero for component distributions.
 #' @param params.list A list of length d, where each element is a sublist of length g.
 #'                    Each sublist contains one numeric vector, which is the parameter value for the corresponding \code{comp.dist}.
-#' @param probs A vector of probabilities. Default is a vector of length d of 0.95, if no value is provided.
+#' @param prob A vector of probabilities. Default is a vector of length d of 0.95, if no value is provided.
 #'
 #' @seealso \code{\link{LRMoE.fit}}, \code{\link{predict.quantile}}.
 #'

@@ -18,7 +18,7 @@ The rows represent the dimensions of \code{Y}, while the columns represent the c
 
 \item{zero.prob}{A d*g matrix of numerics in (0,1), which specify the probability mass at zero for component distributions.}
 
-\item{params.init}{A list of length d, where each element is a sublist of length g.
+\item{params.list}{A list of length d, where each element is a sublist of length g.
 Each sublist contains one numeric vector, which is the parameter value for the corresponding \code{comp.dist}.}
 }
 \value{

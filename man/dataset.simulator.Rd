@@ -15,7 +15,7 @@ dataset.simulator(X, alpha, comp.dist, zero.prob, params.list)
 
 \item{zero.prob}{A d*g matrix of numbers between 0 and 1, describing zero probability masses by dimension and by component.}
 
-\item{paramas.list}{A list of length d, where each element is a sublist of length g.
+\item{params.list}{A list of length d, where each element is a sublist of length g.
 Each sublist contains one numeric vector, which is the initial parameter guess for the corresponding \code{comp.dist}.}
 }
 \value{

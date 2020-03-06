@@ -59,7 +59,7 @@ Each sublist contains one numeric vector, which is the corresponding penalty for
 
 \item{eps}{Stopping criteria for loglikelihood convergence. Default is \code{1e-03}.}
 
-\item{alpha.iter.max}{Maximum number of iterations for updating alpha. Defauls is 5. See also \code{\link{alpha.m.recur}}.}
+\item{alpha.iter.max}{Maximum number of iterations for updating alpha. Defauls is 5.}
 
 \item{ecm.iter.max}{Maximum number of iterations for ECM. Default is 200.}
 

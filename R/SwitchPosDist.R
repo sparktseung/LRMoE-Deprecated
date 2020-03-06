@@ -54,8 +54,8 @@ ind.cdf.y.pos = function(y, comp.dist, params)
           "ZI-poisson"  = {temp = ifelse(y<0, 0, ppois(y, lambda = params[1], lower.tail = TRUE, log.p = FALSE)) },
           "nbinom"      = {temp = ifelse(y<0, 0, pnbinom(y, size = params[1], prob = params[2], lower.tail = TRUE, log.p = FALSE)) },
           "ZI-nbinom"   = {temp = ifelse(y<0, 0, pnbinom(y, size = params[1], prob = params[2], lower.tail = TRUE, log.p = FALSE)) },
-          "gammacount"  = {temp = ifelse(y<0, 0, pgammacount.new(y, m = params[1], s = params[2], log = FALSE)) },
-          "ZI-gammacount"  = {temp = ifelse(y<0, 0, pgammacount.new(y, m = params[1], s = params[2], log = FALSE)) }
+          "gammacount"  = {temp = ifelse(y<0, 0, pgammacount.new(y, m = params[1], s = params[2], log.p = FALSE)) },
+          "ZI-gammacount"  = {temp = ifelse(y<0, 0, pgammacount.new(y, m = params[1], s = params[2], log.p = FALSE)) }
   )
   return(temp)
 }

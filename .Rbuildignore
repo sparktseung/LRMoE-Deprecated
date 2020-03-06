@@ -1,2 +1,14 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^LICENSE$
+^\./\.git$
+^\./\.github$
+^\./temp$
+^\./deprecation$
+^\./test$
+^LRMoE_0\.1\.0\.pdf$
+^deprecation$
+^temp$
+^test$
+^\.git$
+^\.github$

@@ -4,12 +4,14 @@
 \alias{pgammacount.new}
 \title{Modified \code{\link[rmutil]{GammaCount}} cdf for better numerical accuracy.}
 \usage{
-pgammacount.new(q, m, s, log = FALSE)
+pgammacount.new(q, m, s, log.p = FALSE)
 }
 \arguments{
 \item{q}{Vector of quantiles.}
 
 \item{m, s}{Paramaters of Gamma count distribution.}
+
+\item{log.p}{TRUE/FALSE: whether log.p should be returned.}
 }
 \description{
 Modified \code{\link[rmutil]{GammaCount}} cdf for better numerical accuracy.

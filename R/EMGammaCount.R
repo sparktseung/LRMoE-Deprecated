@@ -41,14 +41,14 @@ gammacount.params.m.recur = function(gammacount.params.old,
     shape.m.new = params.new[1]
     disp.s.new = params.new[2]
 
-    prob.log.yu = ifelse(yu[censor.idx]==Inf, 0, pgammacount.new(yu[censor.idx], m = shape.m.new, s = disp.s.new, log = TRUE))
-    prob.log.yl = ifelse(yl[censor.idx]==0, -Inf, pgammacount.new(ceiling(yl[censor.idx])-1, m = shape.m.new, s = disp.s.new, log = TRUE))
+    prob.log.yu = ifelse(yu[censor.idx]==Inf, 0, pgammacount.new(yu[censor.idx], m = shape.m.new, s = disp.s.new, log.p = TRUE))
+    prob.log.yl = ifelse(yl[censor.idx]==0, -Inf, pgammacount.new(ceiling(yl[censor.idx])-1, m = shape.m.new, s = disp.s.new, log.p = TRUE))
 
     expert.gammacount.ll[censor.idx,1]=prob.log.yu+log1mexp(prob.log.yu-prob.log.yl) # likelihood of censored interval: some easy algebra
     expert.gammacount.ll[!censor.idx,1]= dgammacount.new(yl[!censor.idx], m = shape.m.new, s = disp.s.new, log = TRUE)
 
-    prob.log.tu = ifelse(tu==Inf, 0, pgammacount.new(tu, m = shape.m.new, s = disp.s.new, log = TRUE))
-    prob.log.tl = ifelse(tl==0, -Inf, pgammacount.new(ceiling(tl)-1, m = shape.m.new, s = disp.s.new, log = TRUE))
+    prob.log.tu = ifelse(tu==Inf, 0, pgammacount.new(tu, m = shape.m.new, s = disp.s.new, log.p = TRUE))
+    prob.log.tl = ifelse(tl==0, -Inf, pgammacount.new(ceiling(tl)-1, m = shape.m.new, s = disp.s.new, log.p = TRUE))
 
     expert.gammacount.tn[,1]=prob.log.tu+log1mexp(prob.log.tu-prob.log.tl)
     # Deal with no truncation case

@@ -9,6 +9,7 @@
 #' @seealso \code{\link{LRMoE.fit}}, \code{\link{predict.class}}
 #'
 #' @import ggplot2
+#' @importFrom stats aggregate
 #'
 #' @export plot.dataset.class.prob
 #'

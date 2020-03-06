@@ -6,6 +6,7 @@
 #' @return A list of parameter initialization.
 #'
 #' @importFrom EnvStats skewness kurtosis
+#' @importFrom stats var
 #'
 #' @export cluster.mm.severity
 cluster.mm.severity = function(Y, cluster)
@@ -51,6 +52,7 @@ cluster.mm.severity = function(Y, cluster)
 #' @return A list of parameter initialization.
 #'
 #' @importFrom EnvStats skewness kurtosis
+#' @importFrom stats var
 #'
 #' @export cluster.mm.frequency
 cluster.mm.frequency = function(Y, cluster)

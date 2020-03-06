@@ -19,7 +19,7 @@ The rows represent the dimensions of \code{Y}, while the columns represent the c
 \item{params.list}{A list of length d, where each element is a sublist of length g.
 Each sublist contains one numeric vector, which is the parameter value for the corresponding \code{comp.dist}.}
 
-\item{probs}{A vector of probabilities. Default is a vector of length d of 0.95, if no value is provided.}
+\item{prob}{A vector of probabilities. Default is a vector of length d of 0.95, if no value is provided.}
 }
 \value{
 A vector of CTE by dimension.

@@ -24,7 +24,7 @@
 #' @param hyper.params A list of length d, where each element is a sublist of length g.
 #'                     Each sublist contains one numeric vector, which is the corresponding penalty for \code{params.init}.
 #' @param eps Stopping criteria for loglikelihood convergence. Default is \code{1e-03}.
-#' @param alpha.iter.max Maximum number of iterations for updating alpha. Defauls is 5. See also \code{\link{alpha.m.recur}}.
+#' @param alpha.iter.max Maximum number of iterations for updating alpha. Defauls is 5.
 #' @param ecm.iter.max Maximum number of iterations for ECM. Default is 200.
 #' @param grad.jump TRUE/FALSE: whether to use an approximated gradient jump to speed up convergence.
 #' @param grad.period How often should \code{grad.jump} occur. Default is every 5 iterations.

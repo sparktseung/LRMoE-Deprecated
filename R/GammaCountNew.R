@@ -2,6 +2,7 @@
 #'
 #' @param q Vector of quantiles.
 #' @param m,s Paramaters of Gamma count distribution.
+#' @param log.p TRUE/FALSE: whether log.p should be returned.
 #'
 #' @seealso \code{\link[rmutil]{GammaCount}}.
 #'
@@ -10,14 +11,14 @@
 #'
 #' @export pgammacount.new
 #'
-pgammacount.new = function(q, m, s, log=FALSE)
+pgammacount.new = function(q, m, s, log.p=FALSE)
 {
   if(any(m<=0))stop("m must be positive")
   if(any(s<=0))stop("s must be positive")
 
   neg.idx = which(q<0)
   q = floor(q) # convert to integers
-  if(log==TRUE){
+  if(log.p==TRUE){
     temp = log1mexp(-pgamma(m*s,(q+1)*s,1,log.p=TRUE))
     temp[neg.idx] = -Inf
     return(temp)
@@ -32,6 +33,7 @@ pgammacount.new = function(q, m, s, log=FALSE)
 #'
 #' @param y Vector of gamma count values.
 #' @param m,s Paramaters of Gamma count distribution.
+#' @param log TRUE/FALSE: whether log density should be returned.
 #'
 #' @seealso \code{\link[rmutil]{GammaCount}}.
 #'
@@ -49,7 +51,7 @@ dgammacount.new = function(y, m, s, log=FALSE)
   nonint.idx = which(y!=floor(y))
   tmp = ifelse(y==0,pgamma(m*s,(y+1)*s,1,log.p=TRUE,lower.tail=FALSE),
                # pgamma(m*s,y*s+(y==0),1,log=TRUE) + log1mexp(pgamma(m*s,y*s+(y==0),1,log.p=TRUE)-pgamma(m*s,(y+1)*s,1,log.p=TRUE)) )
-               pgamma(m*s,y*s,1,log=TRUE) + log1mexp( pgamma(m*s,y*s,1,log.p=TRUE)-pgamma(m*s,(y+1)*s,1,log.p=TRUE)) )
+               pgamma(m*s,y*s,1,log.p=TRUE) + log1mexp( pgamma(m*s,y*s,1,log.p=TRUE)-pgamma(m*s,(y+1)*s,1,log.p=TRUE)) )
 
   tmp[neg.idx] = -Inf
   tmp[nonint.idx] = -Inf

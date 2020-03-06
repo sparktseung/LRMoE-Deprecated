@@ -25,7 +25,7 @@ LRMoE.loglik(X, Y, model, penalty = TRUE, hyper.alpha, hyper.params)
 \item{hyper.alpha}{A numeric, which penalizes the magnitude of \code{alpha}.}
 
 \item{hyper.params}{A list of length d. Each element is a sublist of length g.
-Each element of a sublist is a vector of numerics, which penalizes expert parameters. See also \code{\link{expert.loglik.pen.dim.comp}}.}
+Each element of a sublist is a vector of numerics, which penalizes expert parameters.}
 }
 \value{
 Loglikelihood (with and without penalty), AIC and BIC.

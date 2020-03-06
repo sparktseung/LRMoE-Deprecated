@@ -5,7 +5,7 @@
 #' @param alpha A g*P matrix of logit regression coefficients.
 #' @param comp.dist A d*g matrix of strings, describing component distributions by dimension and by component.
 #' @param zero.prob A d*g matrix of numbers between 0 and 1, describing zero probability masses by dimension and by component.
-#' @param paramas.list A list of length d, where each element is a sublist of length g.
+#' @param params.list A list of length d, where each element is a sublist of length g.
 #'                    Each sublist contains one numeric vector, which is the initial parameter guess for the corresponding \code{comp.dist}.
 #'
 #' @return A matrix of simulated values, where each row represents a policyholder and each column a dimension of the response variable.

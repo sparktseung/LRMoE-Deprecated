@@ -3,7 +3,7 @@
 #'
 #' @seealso \code{\link{comp.kj.params.m.recur}}
 #'
-#' @importFrom stats dnbinom pnbinom optim
+#' @importFrom stats dnbinom pnbinom optim qnbinom
 #' @importFrom NMOF gridSearch
 #'
 #' @keywords internal

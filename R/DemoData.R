@@ -11,4 +11,13 @@
 #' @keywords data
 #' @name DemoData
 #'
-NULL
+'X'
+
+#' @rdname DemoData
+'Y'
+
+#' @rdname DemoData
+'X.obs'
+
+#' @rdname DemoData
+'Y.obs'
