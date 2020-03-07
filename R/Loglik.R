@@ -14,7 +14,7 @@
 #'
 #' @keywords internal
 #'
-#' @export gate.expert.loglik
+# #' @export gate.expert.loglik
 #'
 gate.expert.loglik = function(alpha, gate.ll, expert.list, penalty = TRUE, hyper.alpha = NULL, hyper.params = NULL)
 {

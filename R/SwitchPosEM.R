@@ -12,7 +12,7 @@
 #'
 #' @keywords internal
 #'
-#' @export comp.kj.params.m.recur
+# #' @export comp.kj.params.m.recur
 comp.kj.params.m.recur = function(comp.kj.dist, comp.kj.params.old,
                                   tl.k, yl.k, yu.k, tu.k,
                                   comp.kj.pos.expert.ll, comp.kj.pos.expert.tn, comp.kj.pos.expert.tn.bar,

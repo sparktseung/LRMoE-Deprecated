@@ -19,7 +19,7 @@
 #'
 #' @keywords internal
 #'
-#' @export expert.poisson
+# #' @export expert.poisson
 expert.poisson = function(tl, yl, yu, tu, g = 1, mean.theta)
 {
   # Initialization: return value are N * g matrices

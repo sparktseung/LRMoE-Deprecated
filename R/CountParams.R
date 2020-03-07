@@ -7,7 +7,7 @@
 #'
 #' @keywords internal
 #'
-#' @export count.alpha
+# #' @export count.alpha
 count.alpha = function(alpha)
 {
   return( ncol(alpha)*(nrow(alpha)-1) )
@@ -24,7 +24,7 @@ count.alpha = function(alpha)
 #'
 #' @keywords internal
 #'
-#' @export count.zero
+# #' @export count.zero
 count.zero = function(comp.dist)
 {
   result = 0
@@ -52,7 +52,7 @@ count.zero = function(comp.dist)
 #'
 #' @keywords internal
 #'
-#' @export count.pos.params
+# #' @export count.pos.params
 count.pos.params = function(comp.dist)
 {
   result = 0

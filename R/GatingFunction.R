@@ -9,7 +9,7 @@
 #`
 #' @keywords internal
 #'
-#' @export gate.logit
+# #' @export gate.logit
 gate.logit = function(x, alpha)
 {
   gate.body=tcrossprod(x,alpha) # = x %*% t(alpha)

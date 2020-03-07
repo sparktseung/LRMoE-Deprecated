@@ -11,7 +11,7 @@
 #'
 #' @importFrom matrixStats rowLogSumExps
 #'
-#' @export comp.zkz.e.recur
+# #' @export comp.zkz.e.recur
 comp.zkz.e.recur = function(gate.ll, expert.list, ll.list)
 {
 

@@ -11,7 +11,7 @@
 #'
 #' @keywords internal
 #'
-#' @export dim.comp.cdf.y.pos
+# #' @export dim.comp.cdf.y.pos
 dim.comp.cdf.y.pos = function(y, comp.dist, params.list)
 {
   n.comp = ncol(comp.dist)
@@ -45,7 +45,7 @@ dim.comp.cdf.y.pos = function(y, comp.dist, params.list)
 #'
 #' @keywords internal
 #'
-#' @export dim.comp.cdf.y
+# #' @export dim.comp.cdf.y
 dim.comp.cdf.y = function(y, comp.dist, zero.prob, params.list)
 {
   temp = dim.comp.cdf.y.pos(y, comp.dist, params.list)
@@ -71,7 +71,7 @@ dim.comp.cdf.y = function(y, comp.dist, zero.prob, params.list)
 #'
 #' @keywords internal
 #'
-#' @export ind.find.cdf
+# #' @export ind.find.cdf
 ind.find.cdf = function(y, X, alpha, comp.dist, zero.prob, params.list)
 {
   n.comp = nrow(alpha)
@@ -104,7 +104,7 @@ ind.find.cdf = function(y, X, alpha, comp.dist, zero.prob, params.list)
 #'
 #' @importFrom stats uniroot
 #'
-#' @export ind.predict.quantile
+# #' @export ind.predict.quantile
 #'
 ind.predict.quantile = function(X, alpha, comp.dist, zero.prob, params.list, prob = NULL)
 {
@@ -201,7 +201,7 @@ predict.quantile = function(X, alpha, comp.dist, zero.prob, params.list, prob = 
 #'
 #' @keywords internal
 #'
-#' @export ind.predict.cte
+# #' @export ind.predict.cte
 #'
 ind.predict.cte = function(X, alpha, comp.dist, zero.prob, params.list, prob = NULL)
 {

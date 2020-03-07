@@ -5,7 +5,7 @@
 #'
 #' @keywords internal
 #'
-#' @export name.y.pos
+# #' @export name.y.pos
 name.y.pos = function(comp.dist)
 {
   temp = NULL

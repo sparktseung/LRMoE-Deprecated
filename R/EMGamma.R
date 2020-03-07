@@ -7,7 +7,7 @@
 #'
 #' @keywords internal
 #'
-#' @export gamma.params.m.recur
+# #' @export gamma.params.m.recur
 gamma.params.m.recur = function(gamma.params.old,
                                 tl, yl, yu, tu,
                                 expert.ll, expert.tn, expert.tn.bar,

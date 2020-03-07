@@ -36,7 +36,7 @@
 #'
 #' @keywords internal
 #'
-#' @export expert.loglik.pen.dim.comp
+# #' @export expert.loglik.pen.dim.comp
 expert.loglik.pen.dim.comp = function(ind.dist, params, hyper.params)
 {
   temp = 0

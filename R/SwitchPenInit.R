@@ -21,7 +21,7 @@
 #'
 #' @keywords internal
 #'
-#' @export hyper.params.kj.initialize
+# #' @export hyper.params.kj.initialize
 hyper.params.kj.initialize = function(ind.dist)
 {
   temp = 0

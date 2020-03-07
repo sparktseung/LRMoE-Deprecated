@@ -8,7 +8,7 @@
 #'
 #' @keywords internal
 #'
-#' @export invgauss.params.m.recur
+# #' @export invgauss.params.m.recur
 invgauss.params.m.recur = function(invgauss.params.old,
                                    tl, yl, yu, tu,
                                    expert.ll, expert.tn, expert.tn.bar,

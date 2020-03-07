@@ -8,7 +8,7 @@
 #'
 #' @keywords internal
 #'
-#' @export nbinom.params.m.recur
+# #' @export nbinom.params.m.recur
 #'
 nbinom.params.m.recur = function(nbinom.params.old,
                                  tl, yl, yu, tu,

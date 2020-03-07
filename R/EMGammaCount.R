@@ -7,7 +7,7 @@
 #'
 #' @keywords internal
 #'
-#' @export gammacount.params.m.recur
+# #' @export gammacount.params.m.recur
 gammacount.params.m.recur = function(gammacount.params.old,
                                      tl, yl, yu, tu,
                                      expert.ll, expert.tn, expert.tn.bar,

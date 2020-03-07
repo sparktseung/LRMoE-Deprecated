@@ -11,7 +11,7 @@
 #'
 #' @keywords internal
 #'
-#' @export zero.prob.m.recur
+# #' @export zero.prob.m.recur
 zero.prob.m.recur = function(z.zero.e.obs, z.pos.e.obs, z.zero.e.lat, z.pos.e.lat, k.e)
 {
   term.zero = sweep(matrix(z.zero.e.obs), 1, sweep(matrix(z.zero.e.lat), 1, matrix(k.e), FUN = "*", check.margin = FALSE), FUN = "+", check.margin = FALSE)

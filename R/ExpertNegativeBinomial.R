@@ -20,7 +20,7 @@
 #'
 #' @keywords internal
 #'
-#' @export expert.nbinom
+# #' @export expert.nbinom
 expert.nbinom = function(tl, yl, yu, tu, g = 1, size.n, prob.p)
 {
   # Initialization: return value are N * g matrices

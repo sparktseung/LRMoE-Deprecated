@@ -31,7 +31,7 @@
 #'
 #' @keywords internal
 #'
-#' @export ind.limit.y.pos
+# #' @export ind.limit.y.pos
 ind.limit.y.pos = function(comp.dist, params, limit)
 {
   temp = NULL

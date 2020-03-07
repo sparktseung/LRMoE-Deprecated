@@ -30,7 +30,7 @@
 #'
 #' @keywords internal
 #'
-#' @export ind.var.y.pos
+# #' @export ind.var.y.pos
 ind.var.y.pos = function(comp.dist, params)
 {
   temp = NULL

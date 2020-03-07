@@ -33,7 +33,7 @@
 #'
 #' @keywords internal
 #'
-#' @export ind.cdf.y.pos
+# #' @export ind.cdf.y.pos
 ind.cdf.y.pos = function(y, comp.dist, params)
 {
   temp = NULL

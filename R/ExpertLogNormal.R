@@ -20,7 +20,7 @@
 #'
 #' @keywords internal
 #'
-#' @export expert.lognormal
+# #' @export expert.lognormal
 expert.lognormal = function(tl, yl, yu, tu, g = 1, meanlog, sdlog)
 {
   # Initialization: return value are N * g matrices

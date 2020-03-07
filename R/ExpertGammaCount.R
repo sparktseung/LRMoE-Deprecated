@@ -20,7 +20,7 @@
 #'
 #' @keywords internal
 #'
-#' @export expert.gammacount
+# #' @export expert.gammacount
 expert.gammacount = function(tl, yl, yu, tu, g = 1, m, s)
 {
   # Initialization: return value are N * g matrices

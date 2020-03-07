@@ -30,7 +30,7 @@
 #'
 #' @keywords internal
 #'
-#' @export ind.mean.y.pos
+# #' @export ind.mean.y.pos
 ind.mean.y.pos = function(comp.dist, params)
 {
   temp = NULL

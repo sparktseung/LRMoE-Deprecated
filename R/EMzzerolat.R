@@ -11,7 +11,7 @@
 #' @keywords internal
 #'
 #' @importFrom copula log1pexp
-#' @export z.zero.e.lat.recur
+# #' @export z.zero.e.lat.recur
 z.zero.e.lat.recur = function(tl.k, comp.kj.zero.inflation, comp.kj.zero.prob.old, comp.kj.pos.expert.tn.bar)
 {
   sample.size.n = length(tl.k)

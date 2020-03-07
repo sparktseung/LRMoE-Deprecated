@@ -21,7 +21,7 @@
 #'
 #' @keywords internal
 #'
-#' @export expert.burr
+# #' @export expert.burr
 expert.burr = function(tl, yl, yu, tu, g = 1, shape1.k, shape2.c, scale.lambda)
 {
   # Initialization: return value are N * g matrices

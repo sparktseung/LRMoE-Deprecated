@@ -11,7 +11,7 @@
 #'
 #' @keywords internal
 #'
-#' @export dim.comp.limit.y.pos
+# #' @export dim.comp.limit.y.pos
 dim.comp.limit.y.pos = function(comp.dist, params.list, limit)
 {
   n.comp = ncol(comp.dist)
@@ -44,7 +44,7 @@ dim.comp.limit.y.pos = function(comp.dist, params.list, limit)
 #'
 #' @keywords internal
 #'
-#' @export dim.comp.limit.y
+# #' @export dim.comp.limit.y
 dim.comp.limit.y = function(comp.dist, zero.prob, params.list, limit)
 {
   temp = dim.comp.limit.y.pos(comp.dist, params.list, limit)
@@ -70,7 +70,7 @@ dim.comp.limit.y = function(comp.dist, zero.prob, params.list, limit)
 #'
 #' @keywords internal
 #'
-#' @export ind.predict.limit
+# #' @export ind.predict.limit
 ind.predict.limit = function(X, alpha, comp.dist, zero.prob, params.list, limit)
 {
   n.comp = nrow(alpha)

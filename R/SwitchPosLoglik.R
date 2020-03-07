@@ -32,7 +32,7 @@
 #'
 #' @keywords internal
 #'
-#' @export pos.expert.loglik.calc
+# #' @export pos.expert.loglik.calc
 pos.expert.loglik.calc = function(ind.dist, tl, yl, yu, tu, params)
 {
   temp = NULL

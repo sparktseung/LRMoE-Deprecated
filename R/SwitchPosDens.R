@@ -35,7 +35,7 @@
 #'
 #' @keywords internal
 #'
-#' @export ind.dens.y.pos
+# #' @export ind.dens.y.pos
 #'
 ind.dens.y.pos = function(comp.dist, params, y.series)
 {

@@ -20,7 +20,7 @@
 #'
 #' @keywords internal
 #'
-#' @export expert.weibull
+# #' @export expert.weibull
 expert.weibull = function(tl, yl, yu, tu, g = 1, shape.k, scale.lambda)
 {
   # Initialization: return value are N * g matrices

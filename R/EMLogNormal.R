@@ -7,7 +7,7 @@
 #'
 #' @keywords internal
 #'
-#' @export lnorm.params.m.recur
+# #' @export lnorm.params.m.recur
 lnorm.params.m.recur = function(lnorm.params.old,
                                 tl, yl, yu, tu,
                                 expert.ll, expert.tn, expert.tn.bar,

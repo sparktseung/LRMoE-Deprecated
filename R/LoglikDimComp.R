@@ -18,7 +18,7 @@
 #'
 #' @keywords internal
 #'
-#' @export expert.loglik.dim.comp
+# #' @export expert.loglik.dim.comp
 expert.loglik.dim.comp = function(Y, comp.dist, zero.init, params.init)
 {
   sample.size.n = nrow(Y) # sample size

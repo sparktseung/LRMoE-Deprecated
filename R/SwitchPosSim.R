@@ -13,7 +13,7 @@
 #'
 #' @keywords internal
 #'
-#' @export sim.y.pos
+# #' @export sim.y.pos
 sim.y.pos = function(sample.size.n, comp.dist, params)
 {
   temp = NULL

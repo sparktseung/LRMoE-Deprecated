@@ -10,7 +10,7 @@
 #'
 #' @keywords internal
 #'
-#' @export dim.comp.mean.y.pos
+# #' @export dim.comp.mean.y.pos
 dim.comp.mean.y.pos = function(comp.dist, params.list)
 {
   n.comp = ncol(comp.dist)
@@ -43,7 +43,7 @@ dim.comp.mean.y.pos = function(comp.dist, params.list)
 #'
 #' @keywords internal
 #'
-#' @export dim.comp.mean.y
+# #' @export dim.comp.mean.y
 dim.comp.mean.y = function(comp.dist, zero.prob, params.list)
 {
   temp = dim.comp.mean.y.pos(comp.dist, params.list)
@@ -69,7 +69,7 @@ dim.comp.mean.y = function(comp.dist, zero.prob, params.list)
 #'
 #' @keywords internal
 #'
-#' @export ind.predict.mean
+# #' @export ind.predict.mean
 ind.predict.mean = function(X, alpha, comp.dist, zero.prob, params.list)
 {
   n.comp = nrow(alpha)

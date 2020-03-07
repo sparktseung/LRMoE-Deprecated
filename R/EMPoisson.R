@@ -7,7 +7,7 @@
 #'
 #' @keywords internal
 #'
-#' @export poisson.params.m.recur
+# #' @export poisson.params.m.recur
 poisson.params.m.recur = function(poisson.params.old,
                                   tl, yl, yu, tu,
                                   expert.ll, expert.tn, expert.tn.bar,

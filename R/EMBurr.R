@@ -8,7 +8,7 @@
 #'
 #' @keywords internal
 #'
-#' @export burr.params.m.recur
+# #' @export burr.params.m.recur
 burr.params.m.recur = function(burr.params.old,
                                tl, yl, yu, tu,
                                expert.ll, expert.tn, expert.tn.bar,

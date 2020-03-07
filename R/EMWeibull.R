@@ -8,7 +8,7 @@
 #'
 #' @keywords internal
 #'
-#' @export weibull.params.m.recur
+# #' @export weibull.params.m.recur
 weibull.params.m.recur = function(weibull.params.old,
                                   tl, yl, yu, tu,
                                   expert.ll, expert.tn, expert.tn.bar,

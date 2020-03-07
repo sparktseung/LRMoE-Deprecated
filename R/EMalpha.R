@@ -14,7 +14,7 @@
 #'
 #' @keywords internal
 #'
-#' @export alpha.m.recur
+# #' @export alpha.m.recur
 alpha.m.recur = function(X, alpha, comp.zkz.e.list, alpha.iter.max,
                          penalty, hyper.alpha)
 {

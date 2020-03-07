@@ -20,7 +20,7 @@
 #'
 #' @keywords internal
 #'
-#' @export expert.invgauss
+# #' @export expert.invgauss
 expert.invgauss = function(tl, yl, yu, tu, g = 1, mean.mu, shape.lamba)
 {
   # Initialization: return value are N * g matrices
