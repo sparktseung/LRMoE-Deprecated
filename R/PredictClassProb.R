@@ -9,6 +9,8 @@
 #'
 #' @importFrom matrixStats rowLogSumExps
 #'
+#' @rawNamespace S3method(predict, class.prob)
+#'
 #' @export predict.class.prob
 predict.class.prob = function(X, alpha)
 {

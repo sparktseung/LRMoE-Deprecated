@@ -107,6 +107,8 @@ ind.predict.var = function(X, alpha, comp.dist, zero.prob, params.list)
 #'
 #' @return A matrix of variance by observation and by dimension.
 #'
+#' @rawNamespace S3method(predict, var)
+#'
 #' @export predict.var
 predict.var = function(X, alpha, comp.dist, zero.prob, params.list)
 {

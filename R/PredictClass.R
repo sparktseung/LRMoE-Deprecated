@@ -7,6 +7,8 @@
 #'
 #' @return A vector of the most likely latent class by observation.
 #'
+#' @rawNamespace S3method(predict, class)
+#'
 #' @export predict.class
 predict.class = function(X, alpha)
 {

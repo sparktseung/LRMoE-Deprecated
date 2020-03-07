@@ -99,6 +99,8 @@ ind.predict.limit = function(X, alpha, comp.dist, zero.prob, params.list, limit)
 #' @return A matrix of limited mean values by observation and by dimension.
 #'         Calculation is done for severity distributions only. \code{NA} values are returned for frequency distributions.
 #'
+#' @rawNamespace S3method(predict, limit)
+#'
 #' @export predict.limit
 predict.limit = function(X, alpha, comp.dist, zero.prob, params.list, limit)
 {
@@ -137,6 +139,7 @@ predict.limit = function(X, alpha, comp.dist, zero.prob, params.list, limit)
 #' @return A matrix of excess mean values by observation and by dimension.
 #'         This is equan to \code{predict.mean - predict.limit}.
 #'
+#' @rawNamespace S3method(predict, excess)
 #'
 #' @export predict.excess
 predict.excess = function(X, alpha, comp.dist, zero.prob, params.list, limit)

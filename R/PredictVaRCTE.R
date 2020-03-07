@@ -152,6 +152,8 @@ ind.predict.quantile = function(X, alpha, comp.dist, zero.prob, params.list, pro
 #'
 #' @return A matrix of VaR.
 #'
+#' @rawNamespace S3method(predict, quantile)
+#'
 #' @export predict.quantile
 predict.quantile = function(X, alpha, comp.dist, zero.prob, params.list, prob = NULL)
 {
@@ -230,6 +232,8 @@ ind.predict.cte = function(X, alpha, comp.dist, zero.prob, params.list, prob = N
 #' @seealso \code{\link{LRMoE.fit}}, \code{\link{predict.quantile}}.
 #'
 #' @return A matrix of CTE.
+#'
+#' @rawNamespace S3method(predict, cte)
 #'
 #' @export predict.cte
 predict.cte = function(X, alpha, comp.dist, zero.prob, params.list, prob = NULL)

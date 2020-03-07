@@ -10,6 +10,8 @@
 #'
 #' @import ggplot2
 #'
+#' @rawNamespace S3method(plot, ind.class.prob)
+#'
 #' @export plot.ind.class.prob
 #'
 plot.ind.class.prob = function(X, alpha, title = "Prediction of Latent Classes")

@@ -11,6 +11,8 @@
 #' @import ggplot2
 #' @importFrom stats aggregate
 #'
+#' @rawNamespace S3method(plot, dataset.class.prob)
+#'
 #' @export plot.dataset.class.prob
 #'
 plot.dataset.class.prob = function(X, alpha, title = "Proportion of Latent Classes")

@@ -97,6 +97,8 @@ ind.predict.mean = function(X, alpha, comp.dist, zero.prob, params.list)
 #'
 #' @return A matrix of mean values by observation and by dimension.
 #'
+#' @rawNamespace S3method(predict, mean)
+#'
 #' @export predict.mean
 predict.mean = function(X, alpha, comp.dist, zero.prob, params.list)
 {

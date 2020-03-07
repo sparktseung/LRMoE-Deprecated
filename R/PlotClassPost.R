@@ -17,6 +17,8 @@
 #' @import ggplot2
 #' @importFrom stats aggregate
 #'
+#' @rawNamespace S3method(plot, dataset.prob.posterior)
+#'
 #' @export plot.dataset.prob.posterior
 plot.dataset.prob.posterior = function(X, Y, alpha, comp.dist, zero.prob, params.list, title = "Proportion of Latent Classes")
 {

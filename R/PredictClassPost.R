@@ -13,6 +13,8 @@
 #'
 #' @return A vector of the most likely latent class by observation.
 #'
+#' @rawNamespace S3method(predict, class.posterior)
+#'
 #' @export predict.class.posterior
 predict.class.posterior = function(X, Y, alpha, comp.dist, zero.prob, params.list)
 {

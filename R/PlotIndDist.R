@@ -18,6 +18,8 @@
 #' @importFrom reshape2 melt
 #' @import ggplot2
 #'
+#' @rawNamespace S3method(plot, ind.fitted.dist)
+#'
 #' @export plot.ind.fitted.dist
 #'
 plot.ind.fitted.dist = function(X, alpha, comp.dist, zero.prob, params.list, plot.dim = 1, plot.lim = NULL)

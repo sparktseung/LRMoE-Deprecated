@@ -15,6 +15,8 @@
 #'
 #' @importFrom matrixStats rowLogSumExps
 #'
+#' @rawNamespace S3method(predict, class.prob.posterior)
+#'
 #' @export predict.class.prob.posterior
 predict.class.prob.posterior = function(X, Y, alpha, comp.dist, zero.prob, params.list)
 {

@@ -16,6 +16,8 @@
 #'
 #' @import ggplot2
 #'
+#' @rawNamespace S3method(plot, ind.class.prob.posterior)
+#'
 #' @export plot.ind.class.prob.posterior
 #'
 plot.ind.class.prob.posterior = function(X, Y, alpha, comp.dist, zero.prob, params.list, title = "Prediction of Latent Classes")
