@@ -10,6 +10,7 @@
 #'     \item \code{burr}: Burr
 #'     \item \code{poisson}: Poisson
 #'     \item \code{nbinom}: Negative Binomial
+#'     \item \code{binom}: Binomial
 #'     \item \code{gammacount}: Gamma Count
 #'     \item \code{ZI-root}: Zero-inflated versions of the distributions above, e.g. \code{ZI-gamma}.
 #' }
@@ -53,6 +54,8 @@ pos.expert.loglik.calc = function(ind.dist, tl, yl, yu, tu, params)
           "ZI-poisson"  = {temp = expert.poisson(tl, yl, yu, tu, 1, params[1])},
           "nbinom"      = {temp = expert.nbinom(tl, yl, yu, tu, 1, params[1], params[2])},
           "ZI-nbinom"   = {temp = expert.nbinom(tl, yl, yu, tu, 1, params[1], params[2])},
+          "binom"       = {temp = expert.binom(tl, yl, yu, tu, 1, params[1], params[2])},
+          "ZI-binom"    = {temp = expert.binom(tl, yl, yu, tu, 1, params[1], params[2])},
           "gammacount"  = {temp = expert.gammacount(tl, yl, yu, tu, 1, params[1], params[2])},
           "ZI-gammacount"  = {temp = expert.gammacount(tl, yl, yu, tu, 1, params[1], params[2])},
           # Error

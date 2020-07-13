@@ -9,6 +9,7 @@
 #'     \item \code{burr}: Burr
 #'     \item \code{poisson}: Poisson
 #'     \item \code{nbinom}: Negative Binomial
+#'     \item \code{binom}: Binomial
 #'     \item \code{gammacount}: Gamma Count
 #'     \item \code{ZI-root}: Zero-inflated versions of the distributions above, e.g. \code{ZI-gamma}.
 #' }
@@ -21,6 +22,7 @@
 #'     \item \code{burr}: \code{(shape1.k, shape2.c, scale.lambda)}
 #'     \item \code{poisson}: \code{(mean.theta)}
 #'     \item \code{nbinom}: \code{(size.n, prob.p)}
+#'     \item \code{binom}: \code{(size.n, prob.p)}
 #'     \item \code{gammacount}: \code{(m, s)}
 #' }
 #'
@@ -51,6 +53,8 @@ ind.mean.y.pos = function(comp.dist, params)
           "ZI-poisson"  = {temp = params[1] },
           "nbinom"      = {temp = params[1] * (1-params[2])/params[2] },
           "ZI-nbinom"   = {temp = params[1] * (1-params[2])/params[2] },
+          "binom"       = {temp = params[1] * params[2] },
+          "ZI-binom"    = {temp = params[1] * params[2] },
           "gammacount"  = {temp = mgammacount(1, m = params[1], s = params[2]) },
           "ZI-gammacount"  = {temp = mgammacount(1, m = params[1], s = params[2]) }
   )

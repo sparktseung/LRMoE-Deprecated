@@ -5,7 +5,7 @@
 #'
 #' @seealso \code{\link{pos.expert.loglik.calc}}
 #'
-#' @importFrom stats rgamma rlnorm rweibull rpois rnbinom
+#' @importFrom stats rgamma rlnorm rweibull rpois rnbinom rbinom
 #' @importFrom statmod rinvgauss
 #' @importFrom actuar rburr
 #' @importFrom rmutil rgammacount
@@ -34,6 +34,8 @@ sim.y.pos = function(sample.size.n, comp.dist, params)
           "ZI-poisson"  = {temp = rpois(sample.size.n, lambda = params[1])},
           "nbinom"      = {temp = rnbinom(sample.size.n, size = params[1], prob = params[2])},
           "ZI-nbinom"   = {temp = rnbinom(sample.size.n, size = params[1], prob = params[2])},
+          "binom"       = {temp = rbinom(sample.size.n, size = params[1], prob = params[2])},
+          "ZI-binom"    = {temp = rbinom(sample.size.n, size = params[1], prob = params[2])},
           "gammacount"  = {temp = rmutil::rgammacount(sample.size.n, m = params[1], s = params[2])},
           "ZI-gammacount"  = {temp = rmutil::rgammacount(sample.size.n, m = params[1], s = params[2])},
           # Error

@@ -9,6 +9,7 @@
 #'     \item \code{burr}: Burr
 #'     \item \code{poisson}: Poisson
 #'     \item \code{nbinom}: Negative Binomial
+#'     \item \code{binom}: Binomial
 #'     \item \code{gammacount}: Gamma Count
 #'     \item \code{ZI-root}: Zero-inflated versions of the distributions above, e.g. \code{ZI-gamma}.
 #' }
@@ -21,6 +22,7 @@
 #'     \item \code{burr}: \code{(shape1.k, shape2.c, scale.lambda)}
 #'     \item \code{poisson}: \code{(mean.theta)}
 #'     \item \code{nbinom}: \code{(size.n, prob.p)}
+#'     \item \code{binom}: \code{(size.n, prob.p)}
 #'     \item \code{gammacount}: \code{(m, s)}
 #' }
 #' @param y.series A vector of y values.
@@ -29,7 +31,7 @@
 #'
 #' @seealso \code{\link{LRMoE.fit}}, \code{\link{plot.ind.fitted.dist}}, \code{\link{ind.cdf.y.pos}}.
 #'
-#' @importFrom stats dgamma dlnorm dweibull dpois dnbinom
+#' @importFrom stats dgamma dlnorm dweibull dpois dnbinom dbinom
 #' @importFrom statmod dinvgauss
 #' @importFrom actuar dburr
 #'
@@ -57,6 +59,8 @@ ind.dens.y.pos = function(comp.dist, params, y.series)
           "ZI-poisson"  = {temp = dpois(y.series, lambda = params[1], log = FALSE) },
           "nbinom"      = {temp = dnbinom(y.series, size = params[1], prob = params[2], log = FALSE) },
           "ZI-nbinom"   = {temp = dnbinom(y.series, size = params[1], prob = params[2], log = FALSE) },
+          "binom"       = {temp = dbinom(y.series, size = params[1], prob = params[2], log = FALSE) },
+          "ZI-binom"    = {temp = dbinom(y.series, size = params[1], prob = params[2], log = FALSE) },
           "gammacount"  = {temp = dgammacount.new(y.series, m = params[1], s = params[2], log = FALSE) },
           "ZI-gammacount"  = {temp = dgammacount.new(y.series, m = params[1], s = params[2], log = FALSE) }
   )

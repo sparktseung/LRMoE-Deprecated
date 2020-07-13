@@ -26,6 +26,8 @@ name.y.pos = function(comp.dist)
           "ZI-poisson"  = {temp = c("mean") },
           "nbinom"      = {temp = c("size", "prob") },
           "ZI-nbinom"   = {temp = c("size", "prob") },
+          "binom"      = {temp = c("size", "prob") },
+          "ZI-binom"   = {temp = c("size", "prob") },
           "gammacount"  = {temp = c("m", "s") },
           "ZI-gammacount"  = {temp = c("m", "s") },
           # Error

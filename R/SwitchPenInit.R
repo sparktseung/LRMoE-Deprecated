@@ -10,6 +10,7 @@
 #'     \item \code{burr}: Burr
 #'     \item \code{poisson}: Poisson
 #'     \item \code{nbinom}: Negative Binomial
+#'     \item \code{binom}: Binomial
 #'     \item \code{gammacount}: Gamma Count
 #'     \item \code{ZI-root}: Zero-inflated versions of the distributions above, e.g. \code{ZI-gamma}.
 #' }
@@ -42,6 +43,8 @@ hyper.params.kj.initialize = function(ind.dist)
           "ZI-poisson"  = {temp = c(2, 1) },
           "nbinom"      = {temp = c(2, 1) },
           "ZI-nbinom"   = {temp = c(2, 1) },
+          "binom"      = {temp = c() },
+          "ZI-binom"   = {temp = c() },
           "gammacount"  = {temp = c(2, 1, 2, 1) },
           "ZI-gammacount" = {temp = c(2, 1, 2, 1) },
           # Error

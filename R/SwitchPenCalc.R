@@ -11,6 +11,7 @@
 #'     \item \code{burr}: \code{(shape1.k, shape2.c, scale.lambda)}
 #'     \item \code{poisson}: \code{(mean.theta)}
 #'     \item \code{nbinom}: \code{(size.n, prob.p)}
+#'     \item \code{binom}: \code{(size.n, prob.p)}
 #'     \item \code{gammacount}: \code{(m, s)}
 #' }
 #'
@@ -26,6 +27,7 @@
 #'     \item \code{burr}: \code{(hyper.shape1.k.1, hyper.shape1.k.2, hyper.shape2.c.1, hyper.shape2.c.2, hyper.scale.lambda.1, hyper.scale.lambda.2)}
 #'     \item \code{poisson}: \code{(hyper.mean.theta.1)}
 #'     \item \code{nbinom}: \code{(hyper.size.n.1, hyper.size.n.2)}
+#'     \item \code{binom}: \code{()}
 #'     \item \code{gammacount}: \code{(hyper.m,1, hyper.m.2, hyper.s.1, hyper.s.2)}
 #' }
 #'
@@ -63,6 +65,8 @@ expert.loglik.pen.dim.comp = function(ind.dist, params, hyper.params)
           "ZI-poisson"  = {temp = (hyper.params[1]-1)*log(params[1]) - params[1]/hyper.params[2] },
           "nbinom"      = {temp = (hyper.params[1]-1)*log(params[1]) - params[1]/hyper.params[2] },
           "ZI-nbinom"   = {temp = (hyper.params[1]-1)*log(params[1]) - params[1]/hyper.params[2] },
+          "binom"       = {temp = 0 },
+          "ZI-binom"    = {temp = 0 },
           "gammacount"  = {temp = (hyper.params[1]-1)*log(params[1]) - params[1]/hyper.params[2] +
             (hyper.params[3]-1)*log(params[2]) - params[2]/hyper.params[4] },
           "ZI-gammacount" = {temp = (hyper.params[1]-1)*log(params[1]) - params[1]/hyper.params[2] +

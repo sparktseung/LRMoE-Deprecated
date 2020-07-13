@@ -10,6 +10,7 @@
 #'     \item \code{burr}: Burr
 #'     \item \code{poisson}: Poisson
 #'     \item \code{nbinom}: Negative Binomial
+#'     \item \code{binom}: Binomial
 #'     \item \code{gammacount}: Gamma Count
 #'     \item \code{ZI-root}: Zero-inflated versions of the distributions above, e.g. \code{ZI-gamma}.
 #' }
@@ -22,12 +23,13 @@
 #'     \item \code{burr}: \code{(shape1.k, shape2.c, scale.lambda)}
 #'     \item \code{poisson}: \code{(mean.theta)}
 #'     \item \code{nbinom}: \code{(size.n, prob.p)}
+#'     \item \code{binom}: \code{(size.n, prob.p)}
 #'     \item \code{gammacount}: \code{(m, s)}
 #' }
 #'
 #' @seealso \code{\link{LRMoE.fit}}, \code{\link{ind.dens.y.pos}}.
 #'
-#' @importFrom stats pgamma plnorm pweibull ppois pnbinom
+#' @importFrom stats pgamma plnorm pweibull ppois pnbinom pbinom
 #' @importFrom statmod pinvgauss
 #' @importFrom actuar pburr
 #'
@@ -54,6 +56,8 @@ ind.cdf.y.pos = function(y, comp.dist, params)
           "ZI-poisson"  = {temp = ifelse(y<0, 0, ppois(y, lambda = params[1], lower.tail = TRUE, log.p = FALSE)) },
           "nbinom"      = {temp = ifelse(y<0, 0, pnbinom(y, size = params[1], prob = params[2], lower.tail = TRUE, log.p = FALSE)) },
           "ZI-nbinom"   = {temp = ifelse(y<0, 0, pnbinom(y, size = params[1], prob = params[2], lower.tail = TRUE, log.p = FALSE)) },
+          "binom"       = {temp = ifelse(y<0, 0, pbinom(y, size = params[1], prob = params[2], lower.tail = TRUE, log.p = FALSE)) },
+          "ZI-binom"    = {temp = ifelse(y<0, 0, pbinom(y, size = params[1], prob = params[2], lower.tail = TRUE, log.p = FALSE)) },
           "gammacount"  = {temp = ifelse(y<0, 0, pgammacount.new(y, m = params[1], s = params[2], log.p = FALSE)) },
           "ZI-gammacount"  = {temp = ifelse(y<0, 0, pgammacount.new(y, m = params[1], s = params[2], log.p = FALSE)) }
   )
