@@ -78,6 +78,8 @@ count.pos.params = function(comp.dist)
               "ZI-poisson"  = {result = result + 1},
               "nbinom"      = {result = result + 2},
               "ZI-nbinom"   = {result = result + 2},
+              "binom"       = {result = result + 1},
+              "ZI-binom"    = {result = result + 1},
               "gammacount"  = {result = result + 2},
               "ZI-gammacount"  = {result = result + 2}
       )

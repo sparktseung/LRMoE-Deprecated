@@ -77,11 +77,12 @@ cluster.mm.frequency = function(Y, cluster)
 
     poisson.init = c(lambda = mean.pos)
     nbinom.init = c(size.n = mean.pos * (mean.pos/var.pos/(1-mean.pos/var.pos)), prob.p = mean.pos/var.pos)
+    binom.init = c(size.n = mean.pos/(1-var.pos/mean.pos), prob.p = 1-var.pos/mean.pos)
     gammacount.init = c(shape = mean.pos * (mean.pos/var.pos/(1-mean.pos/var.pos)), scale = mean.pos/var.pos ) # ad-hoc, same as nbinom
 
 
     result[[length(result)+1]] = list(cluster.prop = cluster.prop, zero.prop = zero.prop, mean.pos = mean.pos, var.pos = var.pos, cv.pos = cv.pos, skew.pos = skew.pos, kurt.pos = kurt.pos,
-                                      poisson.init = poisson.init, nbinom.init = nbinom.init, gammacount.init = gammacount.init)
+                                      poisson.init = poisson.init, nbinom.init = nbinom.init, binom.init = binom.init, gammacount.init = gammacount.init)
   }
 
   return(result)
