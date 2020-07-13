@@ -18,6 +18,7 @@ ind.cdf.y.pos(y, comp.dist, params)
     \item \code{burr}: Burr
     \item \code{poisson}: Poisson
     \item \code{nbinom}: Negative Binomial
+    \item \code{binom}: Binomial
     \item \code{gammacount}: Gamma Count
     \item \code{ZI-root}: Zero-inflated versions of the distributions above, e.g. \code{ZI-gamma}.
 }}
@@ -31,6 +32,7 @@ ind.cdf.y.pos(y, comp.dist, params)
     \item \code{burr}: \code{(shape1.k, shape2.c, scale.lambda)}
     \item \code{poisson}: \code{(mean.theta)}
     \item \code{nbinom}: \code{(size.n, prob.p)}
+    \item \code{binom}: \code{(size.n, prob.p)}
     \item \code{gammacount}: \code{(m, s)}
 }}
 }

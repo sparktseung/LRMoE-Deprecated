@@ -16,6 +16,7 @@ pos.expert.loglik.calc(ind.dist, tl, yl, yu, tu, params)
     \item \code{burr}: Burr
     \item \code{poisson}: Poisson
     \item \code{nbinom}: Negative Binomial
+    \item \code{binom}: Binomial
     \item \code{gammacount}: Gamma Count
     \item \code{ZI-root}: Zero-inflated versions of the distributions above, e.g. \code{ZI-gamma}.
 }}
