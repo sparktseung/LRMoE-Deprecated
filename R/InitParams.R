@@ -72,8 +72,8 @@ cluster.mm.frequency = function(Y, cluster)
     mean.pos = mean(subset.pos)
     var.pos = var(subset.pos)
     cv.pos = sqrt(var.pos)/mean.pos
-    skew.pos = skewness(subset.pos)
-    kurt.pos = kurtosis(subset.pos)
+    skew.pos = skewness(subset.pos, method = "moment")
+    kurt.pos = kurtosis(subset.pos, method = "moment")
 
     poisson.init = c(lambda = mean.pos)
     nbinom.init = c(size.n = mean.pos * (mean.pos/var.pos/(1-mean.pos/var.pos)), prob.p = mean.pos/var.pos)
