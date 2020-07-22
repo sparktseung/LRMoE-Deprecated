@@ -63,7 +63,7 @@ cluster.mm.frequency = function(Y, cluster)
 
   for(j in 1:n.group){
     subset = Y[which(cluster==j)]
-    subset.pos = subset[which(subset>=0)]
+    subset.pos = subset[which(subset>0)]
 
     cluster.prop = length(subset) / length(Y)
 
